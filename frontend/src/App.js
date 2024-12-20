@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from 'react';
-function App() {
-  const [message, setMessage] = useState('');
-  useEffect(() => {
-    fetch('http://localhost:5000/')
-      .then(response => response.text())
-      .then(data => setMessage(data));
-  }, []);
+// import { Route, Routes } from "react-router-dom";
+import LoginPage from "./frontend/pages/LoginPage.jsx";
 
+
+
+const App = () => {
   return (
-    <div className="App">
-      <h1>{message}</h1>
-    </div>
+
+
+    <LoginPage/>
+    // <Routes>
+   
+    //   <Route path="/LoginPage" element={<LoginPage />} />
+     
+    // </Routes>
   );
-}
+};
+
 export default App;
