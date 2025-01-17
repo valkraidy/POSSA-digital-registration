@@ -1,21 +1,26 @@
-import { Route, Routes, BrowserRouter } from "react-router-dom";
-import  HomePage from "./pages/HomePage"
-import LoginPage from "./pages/LoginPage";
 
 
 
+import React from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import About from './components/About'
+// import Testimonials from './components/Testimonials'
+// import Demo from './components/Demo'
+// import Footer from './components/Footer'
 
-const App = () => {
+function App() {
   return (
-     <BrowserRouter>
-      <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/LoginPage" element={<LoginPage />}/>
-    
-      </Routes>
-     </BrowserRouter>
-
+    <div>
+      <Navbar />
+      <Hero />
+      <About/>
+      {/* <Testimonials />
+      <Demo />
+      <Footer /> */}
+    </div>
   );
-};
+}
 
 export default App;
+
