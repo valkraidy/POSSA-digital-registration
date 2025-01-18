@@ -12,7 +12,7 @@ const Demo = () => {
                     <button className='button'>Get your free financial analysis</button>
                 </div>
                 <div className='col-2'>
-                    <img source src="" type=""/>
+                    <img  src="" type=""/>
                 </div>
             </div>
         </div>
