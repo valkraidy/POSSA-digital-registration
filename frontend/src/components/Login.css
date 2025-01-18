@@ -1,0 +1,164 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Container Styles */
+.login-container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  flex-wrap: wrap;
+}
+
+/* Image Section */
+.image-section {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  height: 100%; /* Ensure the image takes up the full height */
+}
+
+.background-image {
+  width: 100%;
+  height: 100%; /* Make sure the image fills the container */
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* Form Section */
+.formm-section {
+  flex: 1;
+  min-width: 300px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px; /* Reduced padding to make the form more compact */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Ensure the form takes up the full height */
+  font-size: 0.9rem; /* Slightly reduced font size to make everything smaller */
+}
+
+/* Logo Section */
+.logo-section {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px; /* Reduce bottom margin */
+}
+
+.plogo {
+  width: 220px; /* Slightly reduce logo size */
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px;
+}
+.welcome {
+  font-size: 2rem; /* Slightly smaller font size */
+  color: #555555;
+  margin-bottom: 0px; /* Reduced bottom margin */
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.para {
+  color: #666;
+  margin-bottom: 10px; /* Reduced margin */
+  text-align: center;
+}
+
+
+/* Form Styles */
+form {
+  width: 100%;
+  max-width: 380px; /* Reduce max-width of form */
+  display: flex;
+  flex-direction: column;
+  margin-top: 0; /* Remove any extra top margin */
+}
+
+label {
+  font-weight: bold;
+  margin-top: 3px; /* Reduce space between labels and inputs */
+}
+
+input {
+  width: 100%;
+  padding: 7px; /* Reduce padding to make inputs smaller */
+  margin-top: 8px; /* Reduce space between fields */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3px; /* Reduced space between options */
+}
+
+.remember-me label {
+  font-size: 0.85rem; /* Slightly reduce font size of the remember me label */
+  color: #555;
+}
+
+.forgot-pin {
+  font-size: 0.85rem; /* Slightly reduce font size of the forgot pin text */
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.forgot-pin:hover {
+  text-decoration: underline;
+}
+
+/* Button Styles */
+.login-button {
+  margin-top: 8px; /* Reduced space above the button */
+  background-color: #003366;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem; /* Slightly reduce font size for the button */
+}
+
+.login-button:hover {
+  background-color: #002244;
+}
+
+/* Register Link */
+.register-link {
+  margin-top: 8px; /* Reduced space between button and register link */
+}
+
+.register-link a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  margin-top: 8px; /* Reduced space above footer */
+  font-size: 0.8rem;
+}
+
+.footer a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
