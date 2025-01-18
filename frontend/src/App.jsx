@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import LoginPage from './components/Login'; 
 import SignUp from './components/SignUp'; 
+import Settings from './components/Settings';
+import Souvenir from './components/Souvenir';
 // import Testimonials from './components/Testimonials';
 // import Demo from './components/Demo';
 // import Footer from './components/Footer';
@@ -13,7 +14,6 @@ import SignUp from './components/SignUp';
 function App() {
   return (
     <Router>
-      <Navbar /> 
       <Routes>
         <Route
           path="/"
@@ -29,6 +29,9 @@ function App() {
         />
         <Route path="/login" element={<LoginPage />} /> {/* Corrected path */}
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/souvenir" element={<Souvenir />} />
+
       </Routes>
     </Router>
   );
