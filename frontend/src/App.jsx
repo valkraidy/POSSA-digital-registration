@@ -3,47 +3,34 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import LoginPage from './components/Login';
-import SignUp from './components/SignUp';
+import LoginPage from './components/Login'; 
+import SignUp from './components/SignUp'; 
 // import Testimonials from './components/Testimonials';
 // import Demo from './components/Demo';
 // import Footer from './components/Footer';
-import React from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-// import Testimonials from './components/Testimonials'
- import Welcome from './components/Welcome'
-//  import Footer from './components/Footer'
-
+//import Welcome from './components/Welcome'; 
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Navbar /> 
       <Routes>
-        {/* Route for the homepage */}
         <Route
           path="/"
           element={
             <>
               <Hero />
               <About />
-              {/* Add other components here for the homepage */}
               {/* <Testimonials /> */}
               {/* <Demo /> */}
               {/* <Footer /> */}
             </>
           }
         />
-        {/* Route for the login page */}
-        <Route path="/register" element={<LoginPage />} />
-        <Route path="/signup" element={<SignUp/>}/>
+        <Route path="/login" element={<LoginPage />} /> {/* Corrected path */}
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </Router>
-    
-    </div>
-
   );
 }
 

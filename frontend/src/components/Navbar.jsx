@@ -42,7 +42,7 @@ const Navbar = () => {
             </a>
           </li>
           <li className="nav-item">
-            <Link to="/register" onClick={closeMenu}>
+            <Link to="/login" onClick={closeMenu}>
               Register
             </Link>
           </li>

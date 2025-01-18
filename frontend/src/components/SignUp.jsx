@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './SignUp.css';
 import POSSA from './images/Possalogo.png';
+import Sign from './images/signup.png';
 
 
 const SignUp = () => {
@@ -20,15 +21,15 @@ const SignUp = () => {
   return (
     <div className="signup-container">
       <div className="image-section">
-        <img src="https://placehold.co/600x600" alt="Students studying" />
+        <img src={Sign} alt="Students studying" />
       </div>
       <div className="form-section">
              <img
                        src={POSSA} 
                        alt="UG Political Science Logo"
-                       className="logo"
+                       className="slogo"
                      />
-        <h3>Sign Up</h3>
+        <h3 className='upp'>Sign Up</h3>
         <p>Enter your credentials to continue.</p>
         <form>
           <div className="form-row">
@@ -71,7 +72,7 @@ const SignUp = () => {
             <button type="submit" className="signup-button">Sign Up</button>
           </div>
         </form>
-        <p>Already have an account? <a href="/register">Login</a></p>
+        <p className='alr'>Already have an account? <a href="/register">Login</a></p>
       </div>
     </div>
   );
