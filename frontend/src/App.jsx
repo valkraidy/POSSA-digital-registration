@@ -5,6 +5,8 @@ import About from './components/About';
 import LoginPage from './components/Login'; 
 import SignUp from './components/SignUp'; 
 import Registration from './components/Registration';
+import Settings from './components/Settings'
+import Souvenir from './components/Souvenir'
 // import Testimonials from './components/Testimonials';
 // import Demo from './components/Demo';
 // import Footer from './components/Footer';
