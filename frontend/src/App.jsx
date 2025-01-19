@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import LoginPage from './components/Login'; 
 import SignUp from './components/SignUp'; 
+import Registration from './components/Registration'; 
 // import Testimonials from './components/Testimonials';
 // import Demo from './components/Demo';
 // import Footer from './components/Footer';
@@ -29,6 +30,7 @@ function App() {
         />
         <Route path="/login" element={<LoginPage />} /> {/* Corrected path */}
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/Registration" element={<Registration />} />
       </Routes>
     </Router>
   );

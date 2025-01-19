@@ -49,11 +49,13 @@ const Login = () => {
             <a href="#" className="forgot-pin">Forgot PIN?</a>
           </div>
 
-          <button type="submit" className="login-button">Login</button>
+          <button type="submit" className="login-button"> <a href="/Registration">Login </a></button>
         </form>
         <p className="register-link">
   Don't have an account? <a href="/signup">Sign-up</a>
 </p>
+        
+
       </div>
     </div>
   );

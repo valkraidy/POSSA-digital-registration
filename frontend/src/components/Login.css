@@ -126,7 +126,7 @@ input {
   margin-top: 8px; /* Reduced space above the button */
   background-color: #003366;
   color: white;
-  padding: 8px;
+  padding: 9px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -134,7 +134,8 @@ input {
 }
 
 .login-button:hover {
-  background-color: #002244;
+  background-color: #4478ac;
+  color: #ccc;
 }
 
 /* Register Link */
