@@ -10,13 +10,13 @@ const Demo = () => {
                 <div className='col-1'>
                     <p>PRESIDENTIAL REMARKS</p>
                     <p> Welcome To POSSA!!!</p>
-                    <p>Welcome to the Political Science family at the University of Ghana! 
+                    <p>"Welcome to the Political Science family at the University of Ghana! 
                         As we embark on this journey, let us embrace the opportunities to 
                         learn, grow, and challenge ourselves. Together, we can foster 
                         meaningful discussions, build strong networks, and make lasting 
                                 impacts within and beyond our community.
 
-                        Wishing you all a successful and enriching academic year ahead!</p>
+                        Wishing you all a successful and enriching academic year ahead!"</p>
                  
                      <p> Miss Josephine Nti</p>
                       <p> President, POSSA</p>
