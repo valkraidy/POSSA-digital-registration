@@ -1,7 +1,7 @@
 import express from 'express';
 import {addUser, checkAuth, deleteUser, findUser, login,logout} from "../Controllers/AuthControllers.js"
 import { verifyToken } from '../utils/verifyToken.js';
-import isAdmin from '../utils/isAdmin.js';
+import isAdmin from '../Middleware/isAdmin.js';
 
 const router = express()
 export default router;

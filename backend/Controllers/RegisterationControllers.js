@@ -1,5 +1,6 @@
 import express from 'express'
 import User from '../Models/Authmodel.js';
+import { sendRegistrationEmail } from '../Nodemailer/emails.js';
 const router = express
 
 
@@ -51,6 +52,14 @@ export const acceptRegistration = async (req, res) => {
         // Approve the user
         user.hasApproved = true;
         await user.save();
+        sendRegistrationEmail(
+            user.email, 
+            "secondSemister", 
+            user.payments[0].amount,
+            user.name,
+            user.date
+            )
+        
 
         // Respond with a success message
         return res.status(200).json({

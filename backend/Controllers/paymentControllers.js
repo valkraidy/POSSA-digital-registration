@@ -68,7 +68,12 @@ export const verifyPayment = async(req, res) => {
             await user.save()
 
             // Send payment confirmation email
-            sendPaymentEmail(user.email, transaction.data.amount, user.name, transaction.data.paid_at, "rrrr",transaction.data.reference);
+            sendPaymentEmail(
+                user.email, 
+                transaction.data.amount /100,
+                user.name, transaction.data.paid_at,
+                  "rrrr",
+                transaction.data.reference);
 
 
 

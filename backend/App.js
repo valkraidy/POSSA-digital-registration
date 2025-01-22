@@ -5,7 +5,7 @@ import { sendPaymentEmail, sendRegistrationEmail } from './Nodemailer/emails.js'
 import paymentRouter from "./Routes/PaymentRoutes.js"
 import AuthRouter from "./Routes/AuthRoutes.js"
 import registerRouter from "./Routes/RegisterRoute.js"
-
+import UploadFileRoute from "./Routes/UploadFileRoute.js"
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 
@@ -38,6 +38,10 @@ app.use('/api/payment', paymentRouter);
 
 //Registeration for a semister Routes
 app.use('/api/register',registerRouter);
+
+
+//Route upload files 
+app.use('/api/FileUpload',UploadFileRoute);
 
 
 

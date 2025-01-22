@@ -19,6 +19,12 @@ const userSchema = new mongoose.Schema({
     hasUploaded: { type: Boolean, default: false },
     hasApproved: { type: Boolean, default: false },
 
+    //Documents Uploaded
+    documents: [{
+        type: { type: String },
+        url: { type: String }
+    }],
+
 
     //Program of study
     program: { type: String },

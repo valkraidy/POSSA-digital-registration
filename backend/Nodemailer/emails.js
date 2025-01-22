@@ -9,7 +9,7 @@ export const sendRegistrationEmail = async (email,hall,amount,name,date) => {
         const res = await mailClient.send({
             to: recipient,
             from: mailSender,
-            subject: "Hall Registration",
+            subject: "Registration and Payment of Dues",
             html: RegistrationEmail.replace('{studentName}',name ).replace('{hallName}',hall).replace('{hallFee}',amount).replace('{registrationDate}', date)
         });
         console.log("Registration Email Sent: ", res);

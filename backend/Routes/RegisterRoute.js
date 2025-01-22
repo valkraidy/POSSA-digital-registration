@@ -9,4 +9,4 @@ router.post('/semRegisteration', registerSemester)
 
 
 //Enpoint to accept registeration by Admin 
-router.post('/acceptRegisteration', acceptRegistration)
+router.post('/approveRegisteration', acceptRegistration)
