@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import './Souvenir.css';
+import '../styles/Souvenir.css';
 import Sidebar from './Sidebar';
 
 const Souvenir = () => {

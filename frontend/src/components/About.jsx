@@ -1,6 +1,6 @@
-import React from 'react'
-import about from './images/about.png'
-import './About.css'
+import React from 'react';
+import about from '../images/about.png';
+import '../styles/About.css';
 
 const About = () => {
     return (

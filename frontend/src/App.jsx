@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Hero from './components/Hero';
 import About from './components/About';
-import LoginPage from './components/Login'; 
-import SignUp from './components/SignUp'; 
-import Registration from './components/Registration';
+import LoginPage from './Pages/Login'; 
+import SignUp from './Pages/SignUp'; 
+import Registration from './Pages/Registration';
 import Settings from './components/Settings'
 import Souvenir from './components/Souvenir'
 // import Testimonials from './components/Testimonials';

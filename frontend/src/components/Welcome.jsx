@@ -1,6 +1,6 @@
-import React from 'react'
-import './Welcome.css'
-import wel from './images/wel.jpg'
+import React from 'react';
+import '../styles/Welcome.css';
+import wel from '../images/wel.jpg';
 
 
 const Demo = () => {
