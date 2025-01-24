@@ -1,7 +1,7 @@
 import React from 'react'
-import user1 from './images/user1.jpeg'
-import user2 from './images/user2.jpeg'
-import user3 from './images/user3.jpeg'
+import wel from './images/wel.jpg'
+import u from './images/u.jpg'
+import uu from './images/uu.jpg'
 import './Testimonials.css'
 
 const Testimonials = () => {
@@ -12,22 +12,19 @@ const Testimonials = () => {
                 <span className='line'></span>
                 <div className='content'>
                     <div className='card'>
-                        <img src={user1} alt='user1'/>
-                        <p>It is not every day that you come across a passionate and trustworthy financial advisor. John Doe is true professional who does his work really well. Thanks John!</p>
-                        <p><span>Johnson.M.J.</span></p>
-                        <p>Director of "Financial Times"</p>
+                        <img src={wel} alt='user1'/>
+                        <p>Breaking Barriers: Miss Josephine Nti Becomes First Female POSSA President</p>
+                        <p><span>The Political Science Students Association (POSSA) has made history by electing Miss Josephine Nti, a level 300 student as its first female president in over 60 year.</span></p>
                     </div>
                     <div className='card'>
-                        <img src={user2} alt='user1'/>
-                        <p>In just 2 very short meetings with John he managed to find the solution personally catered to my situation and expectations. Punctual, well informed and very reliable.</p>
-                        <p><span>Carol Harper</span></p>
-                        <p>Director at Risktec Solutions Ltd</p>
+                        <img src={u} alt='user1'/>
+                        <p>Roundtable conference on "Electronic Technology and the Future of Elections in Ghana."</p>
+                        <p><span>The Department of Political Science as part of activities marking its 60th Anniversary is organizing a roundtable conference on the topic "Electronic Technology and the Future of Elections in Ghana."</span></p>
                     </div>
                     <div className='card'>
-                        <img src={user3} alt='user1'/>
-                        <p>A very professional financial advisor, who is true to his word. John has demonstrated a high amount of integrity in the time I have known him, and he is fast to respond to my concerns.</p>
-                        <p><span>Snow.J.R.</span></p>
-                        <p>Managing Director of BPW Global</p>
+                        <img src={uu} alt='user1'/>
+                        <p>Dr Seidu Alidu : Department of Political Science gets a New Head of Department</p>
+                        <p><span>Following the successful tenure of Dr Maame A. Gyekye-Jandoh on 31st July, 2022; the University has appointed Dr Seidu M. Alidu to be the new Head of Department effective 1st August 2022 for the next two years subject to renewal. Congratulations Dr Alidu and best regards. Ayekoo!!</span></p>
                     </div>
                 </div>
             </div>

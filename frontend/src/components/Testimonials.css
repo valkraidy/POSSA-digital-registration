@@ -3,8 +3,8 @@
 }
 
 .testimonials .container {
-    width: 1240px;
-    margin: 4rem auto;
+    width: 1100px;
+    margin:04rem auto;
     padding: 4rem 0rem;
 }
 
@@ -29,21 +29,32 @@
 }
 
 .testimonials img {
-    border-radius: 50px;
+    border-radius: 10px;
     margin-top: -2rem;
+    /* width: 322px;*/
+    height: 290px; 
+    justify-content:center;
+    position:relative;
+    /* left:10px; */
+      width: auto;
+    /* height: auto */
+
+
 }
 
 
 .testimonials .card p {
     color: #787878;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin: 12px;
+    font-weight:600;
+    color:#153D6F
 }
 
 .testimonials .card span {
-    color: var(--primary-color);
-    font-size: 1rem;
-    font-weight: 700;
+    color:#30343D80;
+    font-size: 1.3rem;
+    font-weight: 400;
 }
 
 @media screen and (max-width: 940px) {
