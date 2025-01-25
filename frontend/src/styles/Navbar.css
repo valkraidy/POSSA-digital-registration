@@ -47,6 +47,15 @@
 .hamburger {
     display: none;
      color:black;
+    
+}
+.butt{
+background-color:#153D6F;
+border-radius:5px;
+ width:117px;
+     height:34px;
+     color:#fff;
+
 }
 
 
