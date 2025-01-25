@@ -31,17 +31,20 @@ const Navbar = () => {
                         <a href='#about' onClick={closeMenu}>About</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#testimonials' onClick={closeMenu}>Testimonials</a>
+                        <a href='#testimonials' onClick={closeMenu}>News & Events</a>
                     </li>
-                    <li className='nav-item'>
+                  <li className='nav-item'>
+                        <a href='#demo' onClick={closeMenu}>Need Assistance?</a>
+                    </li>  
+                     {/* <li className='nav-item'>
                         <a href='#demo' onClick={closeMenu}>Demo</a>
-                    </li>
-                     <li className='nav-item'>
-                        <a href='#demo' onClick={closeMenu}>Demo</a>
-                    </li>
-                     <li className='nav-item'>
-                        <a href='#Dashboard' onClick={closeMenu}>Dashboard</a>
-                    </li>
+                    </li> */}
+                     <button className='butt'> 
+                     <p>Registration</p>
+                        <link rel="icon" href="favicon" 
+                        
+                        />
+                    </button>
                 </ul>
             </nav>
         </div>
