@@ -12,44 +12,43 @@ const Navbar = () => {
 
   const closeMenu = () => setClick(false);
 
-  return (
-    <div className="header">
-      <nav className="navbar">
-        <Link to="/" className="logo">
-          <img src={logo} alt="logo" />
-        </Link>
-        <div className="hamburger" onClick={handleClick}>
-          {click ? (
-            <FaTimes size={30} style={{ color: '#ffffff' }} />
-          ) : (
-            <FaBars size={30} style={{ color: '#000000' }} />
-          )}
+    return (
+        <div className='header'>
+            <nav className='navbar'>
+                <a href='/' className='logo'>
+                    <img src={logo} alt='logo' />
+                </a>
+                <div className='hamburger' onClick={handleClick}>
+                    {click ? (<FaTimes size={30} style={{ color: '#ffffff' }} />)
+                        : (<FaBars size={30} style={{ color: '#000000' }} />)}
+
+                </div>
+                <ul className={click ? "nav-menu active" : "nav-menu"}>
+                    <li className='nav-item'>
+                        <a href='/' onClick={closeMenu}>Home</a>
+                    </li>
+                    <li className='nav-item'>
+                        <a href='#about' onClick={closeMenu}>About</a>
+                    </li>
+                    <li className='nav-item'>
+                        <a href='#testimonials' onClick={closeMenu}>News & Events</a>
+                    </li>
+                  <li className='nav-item'>
+                        <a href='#demo' onClick={closeMenu}>Need Assistance?</a>
+                    </li>  
+                     {/* <li className='nav-item'>
+                        <a href='#demo' onClick={closeMenu}>Demo</a>
+                    </li> */}
+                     <button className='butt'> 
+                     <p>Registration</p>
+                        <link rel="icon" href="favicon" 
+                        
+                        />
+                    </button>
+                </ul>
+            </nav>
         </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li className="nav-item">
-            <Link to="/" onClick={closeMenu}>
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <a href="#about" onClick={closeMenu}>
-              About
-            </a>
-          </li>
-          <li className="nav-item">
-            <Link to="/settings" onClick={closeMenu}>
-              Testimonials
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/login" onClick={closeMenu}>
-              Register
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  );
-};
+    )
+}
 
 export default Navbar;

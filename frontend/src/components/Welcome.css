@@ -36,7 +36,8 @@
 .demo .col-1 p:nth-child(3) {
     font-size: 1.6rem;
     margin-bottom: 1rem;
-    line-height:30px
+    line-height:30px;
+     color:#30343D80;
 }
 .demo .col-1 p:nth-child(4) {
     font-size: 1.3rem;
