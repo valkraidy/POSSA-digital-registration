@@ -42,22 +42,14 @@ function App() {
 
 
 import React from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
- import Testimonials from './components/Testimonials'
- import Welcome from './components/Welcome'
-  import Footer from './components/Footer'
+import Homepage from './components/Homepage'
+
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Hero />
-      <About/>
-       <Testimonials />
-      <Welcome />
-      <Footer />
+     
+      <Homepage/>
     </div>
 >>>>>>> 6896a5d17f057c9bd1884e67574eb9317adb201e
   );
