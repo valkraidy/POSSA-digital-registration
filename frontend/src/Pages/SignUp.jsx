@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './SignUp.css';
-import POSSA from './images/Possalogo.png';
-import Sign from './images/signup.png';
+import '../styles/SignUp.css';
+import POSSA from '../images/Possalogo.png';
+import Sign from '../images/signup.png';
 
 
 const SignUp = () => {

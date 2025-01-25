@@ -1,7 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./Sidebar.css"; // Create a separate CSS file for styling
-import UG from './images/Uglogo.png';
+import "../styles/Sidebar.css";
+import UG from "../images/Possalogo.png";
+
 const Sidebar = () => {
   return (
     <div className="sidebar">
@@ -12,32 +13,50 @@ const Sidebar = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/dashboard" className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink
+              to="/dashboard"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               <span className="icon">📊</span> Dashboard
             </NavLink>
           </li>
           <li>
-            <NavLink to="/payments-monitoring" className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink
+              to="/payments-monitoring"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               <span className="icon">💳</span> Payments Monitoring
             </NavLink>
           </li>
           <li>
-            <NavLink to="/registration-approval" className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink
+              to="/registration-approval"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               <span className="icon">📝</span> Registration Approval
             </NavLink>
           </li>
           <li>
-            <NavLink to="/souvenir" className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink
+              to="/souvenir"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               <span className="icon">🎁</span> Souvenir Booking Management
             </NavLink>
           </li>
           <li>
-            <NavLink to="/settings" className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink
+              to="/settings"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               <span className="icon">⚙️</span> Settings
             </NavLink>
           </li>
           <li>
-            <NavLink to="/logout" className={({ isActive }) => (isActive ? "active" : "")}>
+            <NavLink
+              to="/logout"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               <span className="icon">🔓</span> Logout
             </NavLink>
           </li>

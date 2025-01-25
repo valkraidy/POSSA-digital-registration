@@ -1,7 +1,7 @@
 import React from 'react';
-import './Login.css';
-import universityImage from './images/UGbuilding.png';
-import POSSA from './images/Possalogo.png';
+import '../styles/Login.css';
+import universityImage from '../images/UGbuilding.png';
+import POSSA from '../images/Possalogo.png';
 
 
 const Login = () => {
