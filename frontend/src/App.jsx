@@ -5,8 +5,9 @@ import About from './components/About';
 import LoginPage from './Pages/Login'; 
 import SignUp from './Pages/SignUp'; 
 import Registration from './Pages/Registration';
-import Settings from './components/Settings'
-import Souvenir from './components/Souvenir'
+import Settings from './Pages/Settings';
+import Souvenir from './Pages/Souvenir';
+import Dashboard from './Pages/Dashboard';
 // import Testimonials from './components/Testimonials';
 // import Demo from './components/Demo';
 // import Footer from './components/Footer';
@@ -28,6 +29,7 @@ function App() {
             </>
           }
         />
+        <Route path="/admin" element={<Dashboard />} />
         <Route path="/login" element={<LoginPage />} /> {/* Corrected path */}
         <Route path="/signup" element={<SignUp />} />
         <Route path="/settings" element={<Settings />} />

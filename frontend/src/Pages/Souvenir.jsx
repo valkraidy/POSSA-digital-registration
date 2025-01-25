@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import '../styles/Souvenir.css';
-import Sidebar from './Sidebar';
+import Sidebar from '../components/Sidebar';
 
 const Souvenir = () => {
   const [date, setDate] = useState(new Date()); // Today's date as default
