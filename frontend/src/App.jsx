@@ -9,6 +9,7 @@ import Settings from './Pages/Settings'
 import Souvenir from './Pages/Souvenir'
 import Homepage from './components/Homepage' 
 
+
 function App() {
   return (
     <Router>
@@ -16,7 +17,7 @@ function App() {
         <Route
           path="/" element={<Homepage/>}
         />
-        <Route path="/admin" element={<Dashboard />} />
+        
         <Route path="/login" element={<LoginPage />} /> {/* Corrected path */}
         <Route path="/signup" element={<SignUp />} />
         <Route path="/settings" element={<Settings />} />
