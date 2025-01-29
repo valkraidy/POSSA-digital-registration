@@ -1,7 +1,7 @@
 import React from 'react'
-import wel from './images/wel.jpg'
-import u from './images/u.jpg'
-import uu from './images/uu.jpg'
+import wel from '../images/wel.jpg'
+import u from '../images/u.jpg'
+import uu from '../images/uu.jpg'
 import './Testimonials.css'
 
 const Testimonials = () => {

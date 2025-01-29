@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
-
- import logo from './images/logo.jpg'
-
-import './Navbar.css'
+import React, { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import logo from '../images/logo.jpg';
+import '../styles/Navbar.css';
 
 const Navbar = () => {
+  const [click, setClick] = useState(false);
 
-    const [click, setClick] = useState(false)
-    const handleClick = () => setClick(!click)
+  const handleClick = () => setClick(!click);
 
-    const closeMenu = () => setClick(false)
+  const closeMenu = () => setClick(false);
 
     return (
         <div className='header'>
@@ -51,4 +50,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;
