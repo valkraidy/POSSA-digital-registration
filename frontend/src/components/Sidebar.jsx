@@ -14,7 +14,7 @@ const Sidebar = () => {
         <ul>
           <li>
             <NavLink
-              to="/dashboard"
+              to="/admin"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               <span className="icon">📊</span> Dashboard

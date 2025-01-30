@@ -1,18 +1,25 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 import '../styles/Login.css';
 import universityImage from '../images/UGbuilding.png';
 import POSSA from '../images/Possalogo.png';
 
-
 const Login = () => {
+  const navigate = useNavigate(); // Initialize navigate function
+
+  const handleLogin = (e) => {
+    e.preventDefault(); // Prevent page refresh
+    navigate('/Registration'); // Navigate to Registration page
+  };
+
   return (
     <div className="login-container">
       <div className="image-section">
-      <img
-      src={universityImage}
-      alt="University of Ghana"
-      className="background-image"
-    />
+        <img
+          src={universityImage}
+          alt="University of Ghana"
+          className="background-image"
+        />
       </div>
       <div className="formm-section">
         <div className="logo-section">
@@ -24,7 +31,7 @@ const Login = () => {
         </div>
         <h2 className='welcome'>Welcome</h2>
         <p className='para'>Enter your credentials to continue.</p>
-        <form>
+        <form onSubmit={handleLogin}>
           <label htmlFor="studentId">Student ID or mail</label>
           <input
             type="text"
@@ -49,13 +56,12 @@ const Login = () => {
             <a href="#" className="forgot-pin">Forgot PIN?</a>
           </div>
 
-          <button type="submit" className="login-button"> <a href="/Registration">Login </a></button>
+          <button type="submit" className="login-button">Login</button>
         </form>
-        <p className="register-link">
-  Don't have an account? <a href="/signup">Sign-up</a>
-</p>
         
-
+        <p className="register-link">
+          Don't have an account? <a href="/signup">Sign-up</a>
+        </p>
       </div>
     </div>
   );
