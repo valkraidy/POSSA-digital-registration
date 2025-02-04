@@ -8,6 +8,7 @@ import Registration from "./Pages/Registration";
 import Settings from "./Pages/Settings";
 import Souvenir from "./Pages/Souvenir";
 import Homepage from "./components/Homepage";
+import Payments from "./Pages/Payments";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/settings" element={<Settings />} />
         <Route path="/souvenir" element={<Souvenir />} />
         <Route path="/Registration" element={<Registration />} />
+        <Route path="/payments" element={<Payments />} />
       </Routes>
     </Router>
   );

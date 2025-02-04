@@ -22,7 +22,7 @@ const Sidebar = () => {
           </li>
           <li>
             <NavLink
-              to="/payments-monitoring"
+              to="/payments"
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               <span className="icon">💳</span> Payments Monitoring
