@@ -75,7 +75,7 @@ const Dashboard = () => {
   ]
 
   return (
-    <div className="flex min-h-screen bg-gray-50 relative">
+    <div className="flex min-h-screen bg-gray-50 relative max-w-full overflow-x-hidden">
       {/* Sidebar with overlay for mobile */}
       <div
         className={`fixed inset-0 bg-black/50 lg:hidden transition-opacity z-30 ${
@@ -101,42 +101,42 @@ const Dashboard = () => {
 
         <nav className="space-y-1 flex-1">
           <div className="flex items-center text-primary p-3 bg-blue-50 rounded-lg">
-            <Users className="w-5 h-5 mr-3" />
+            <Users className="w-5 h-5 mr-3 text-[#4318ff]" />
             <span className="font-medium">Dashboard</span>
           </div>
 
           <div className="flex items-center text-gray-600 p-3 hover:bg-gray-100 rounded-lg transition-colors duration-200">
-            <Wallet className="w-5 h-5 mr-3" />
+            <Wallet className="w-5 h-5 mr-3 text-[#4318ff]" />
             <span className="font-medium">Payments Monitoring</span>
           </div>
 
           <div className="flex items-center text-gray-600 p-3 hover:bg-gray-100 rounded-lg transition-colors duration-200">
-            <Hourglass className="w-5 h-5 mr-3" />
+            <Hourglass className="w-5 h-5 mr-3 text-[#4318ff]" />
             <span className="font-medium">Registration Approval</span>
           </div>
 
           <div className="flex items-center text-gray-600 p-3 hover:bg-gray-100 rounded-lg transition-colors duration-200">
-            <Gift className="w-5 h-5 mr-3" />
+            <Gift className="w-5 h-5 mr-3 text-[#4318ff]" />
             <span className="font-medium">Souvenirs Booking</span>
           </div>
         </nav>
 
         <div className="border-t pt-4 space-y-1">
           <div className="flex items-center text-gray-600 p-3 hover:bg-gray-100 rounded-lg transition-colors duration-200 cursor-pointer">
-            <Settings className="w-5 h-5 mr-3" />
+            <Settings className="w-5 h-5 mr-3 text-[#4318ff]" />
             <span className="font-medium">Settings</span>
           </div>
           <div className="flex items-center text-gray-600 p-3 hover:bg-gray-100 rounded-lg transition-colors duration-200 cursor-pointer">
-            <LogOut className="w-5 h-5 mr-3" />
+            <LogOut className="w-5 h-5 mr-3 text-[#4318ff]" />
             <span className="font-medium">Logout</span>
           </div>
         </div>
       </aside>
 
       {/* Main Content */}
-      <div className="flex-1 lg:ml-64">
+      <div className="flex-1 lg:ml-64 w-full">
         <MobileHeader onMenuClick={toggleSidebar} sidebarOpen={sidebarOpen} />
-        <div className="p-4 lg:p-8">
+        <div className="p-4 lg:p-8 max-w-full">
           {/* Header Section */}
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 gap-4">
             <div>
@@ -145,29 +145,31 @@ const Dashboard = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full lg:w-auto">
-              <div className="oval-button-group w-full sm:w-auto">
-                <button
-                  className={`oval-button ${activeTab === "full" ? "oval-button-active" : "oval-button-inactive"}`}
-                  onClick={() => setActiveTab("full")}
-                >
-                  Full Statistics
-                </button>
-                <button
-                  className={`oval-button ${activeTab === "recent" ? "oval-button-active" : "oval-button-inactive"}`}
-                  onClick={() => setActiveTab("recent")}
-                >
-                  Recent Summary
-                </button>
-              </div>
-              <div className="flex items-center space-x-4 w-full sm:w-auto">
-                <div className="border border-gray-200 rounded-lg p-2">
-                  <Search className="w-5 h-5 text-gray-400" />
+                <div className="oval-button-group w-full sm:w-auto overflow-x-auto max-w-max">
+                    <button
+                    className={`oval-button min-w-[120px] ${activeTab === "full" ? "oval-button-active" : "oval-button-inactive"}`}
+                    onClick={() => setActiveTab("full")}
+                    >
+                    Full Statistics
+                    </button>
+                    <button
+                    className={`oval-button min-w-[120px] ${activeTab === "recent" ? "oval-button-active" : "oval-button-inactive"}`}
+                    onClick={() => setActiveTab("recent")}
+                    >
+                    Recent Summary
+                    </button>
                 </div>
-                <div className="border border-gray-200 rounded-lg p-2">
-                  <Bell className="w-5 h-5 text-gray-400" />
+
+                {/* Add hidden for mobile (below large screens) */}
+                <div className="flex items-center space-x-4 w-full sm:w-auto hidden lg:flex">
+                    <div className="border border-gray-200 rounded-lg p-2">
+                    <Search className="w-5 h-5 text-gray-400" />
+                    </div>
+                    <div className="border border-gray-200 rounded-lg p-2">
+                    <Bell className="w-5 h-5 text-gray-400" />
+                    </div>
+                    <div className="w-10 h-10 bg-gray-200 rounded-full" />
                 </div>
-                <div className="w-10 h-10 bg-gray-200 rounded-full" />
-              </div>
             </div>
           </div>
 
@@ -176,7 +178,7 @@ const Dashboard = () => {
             <Card className="stats-card">
               <div className="flex flex-col">
                 <div className="flex items-center mb-4">
-                  <Users className="w-5 h-5 text-primary mr-2" />
+                  <Users className="w-5 h-5 text-[#4318ff] mr-2" />
                   <span className="text-gray-600">Total Registration</span>
                 </div>
                 <span className="text-3xl font-bold text-gray-800">234</span>
@@ -187,7 +189,7 @@ const Dashboard = () => {
             <Card className="stats-card">
               <div className="flex flex-col">
                 <div className="flex items-center mb-4">
-                  <Wallet className="w-5 h-5 text-primary mr-2" />
+                  <Wallet className="w-5 h-5 text-[#4318ff] mr-2" />
                   <span className="text-gray-600">Total Payments Received</span>
                 </div>
                 <span className="text-3xl font-bold text-gray-800">₵ 6,000</span>
@@ -198,7 +200,7 @@ const Dashboard = () => {
             <Card className="stats-card">
               <div className="flex flex-col">
                 <div className="flex items-center mb-4">
-                  <Hourglass className="w-5 h-5 text-primary mr-2" />
+                  <Hourglass className="w-5 h-5 text-[#4318ff] mr-2" />
                   <span className="text-gray-600">Pending Approval</span>
                 </div>
                 <span className="text-3xl font-bold text-gray-800">44</span>
@@ -209,7 +211,7 @@ const Dashboard = () => {
             <Card className="stats-card">
               <div className="flex flex-col">
                 <div className="flex items-center mb-4">
-                  <Gift className="w-5 h-5 text-primary mr-2" />
+                  <Gift className="w-5 h-5 text-[#4318ff] mr-2" />
                   <span className="text-gray-600">Souvenir Collection</span>
                 </div>
                 <span className="text-3xl font-bold text-gray-800">100</span>
@@ -219,7 +221,7 @@ const Dashboard = () => {
           </div>
 
           {/* Charts Row */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
             <Card className="chart-card">
               <div className="flex justify-between items-center mb-6">
                 <h3 className="font-bold text-gray-800">Payment Trends</h3>
@@ -238,41 +240,44 @@ const Dashboard = () => {
             </Card>
 
             <Card className="chart-card">
-              <div className="flex justify-between items-center mb-6">
-                <h3 className="font-bold text-gray-800">Registration Status</h3>
-                <PieChartIcon className="w-5 h-5 text-gray-400" />
-              </div>
-              <div className="flex flex-col sm:flex-row justify-between items-center h-64">
-                <PieChart width={200} height={200}>
-                  <Pie
-                    data={registrationData}
-                    cx={100}
-                    cy={100}
-                    innerRadius={60}
-                    outerRadius={80}
-                    paddingAngle={5}
-                    dataKey="value"
-                  >
-                    {registrationData.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
-                    ))}
-                  </Pie>
-                  <Tooltip />
-                </PieChart>
-                <div className="flex flex-col space-y-2 mt-4 sm:mt-0">
-                  {registrationData.map((entry, index) => (
-                    <div key={index} className="flex items-center">
-                      <div className="w-3 h-3 rounded-full mr-2" style={{ backgroundColor: entry.color }} />
-                      <span className="text-sm text-gray-600">
-                        {entry.name}: {entry.value}%
-                      </span>
-                    </div>
-                  ))}
+                <div className="flex justify-between items-center mb-6">
+                    <h3 className="font-bold text-gray-800">Registration Status</h3>
+                    <PieChartIcon className="w-5 h-5 text-gray-400" />
                 </div>
-              </div>
+                <div className="flex flex-col sm:flex-row justify-between items-center w-full h-auto sm:h-64">
+                    {/* Pie chart */}
+                    <PieChart width={200} height={200} className="sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px]">
+                    <Pie
+                        data={registrationData}
+                        cx={100}
+                        cy={100}
+                        innerRadius={60}
+                        outerRadius={80}
+                        paddingAngle={5}
+                        dataKey="value"
+                    >
+                        {registrationData.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={entry.color} />
+                        ))}
+                    </Pie>
+                    <Tooltip />
+                    </PieChart>
+
+                    {/* Key with smaller font size on mobile */}
+                    <div className="flex flex-col space-y-2 mt-4 sm:mt-0 sm:max-w-[180px] sm:overflow-y-auto sm:h-full">
+                    {registrationData.map((entry, index) => (
+                        <div key={index} className="flex items-center text-xs sm:text-sm lg:text-base">
+                        <div className="w-3 h-3 rounded-full mr-2" style={{ backgroundColor: entry.color }} />
+                        <span className="text-sm text-gray-600">
+                            {entry.name}: {entry.value}%
+                        </span>
+                        </div>
+                    ))}
+                    </div>
+                </div>
             </Card>
 
-            <Card className="chart-card">
+            <Card className="chart-card hidden lg:block">
               <div className="flex justify-between items-center mb-6">
                 <h3 className="font-bold text-gray-800">Collection Schedule</h3>
                 <BarChartIcon className="w-5 h-5 text-gray-400" />
