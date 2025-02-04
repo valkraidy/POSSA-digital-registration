@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Hero from "./components/Hero";
 // import About from "./components/About";
-import Dashboard from "./Pages/Dashboard";
+import Dashboard from "./components/Dashboard";
 import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 import Registration from "./Pages/Registration";
