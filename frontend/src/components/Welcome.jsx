@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Welcome.css';
+import './Welcome.css';
 import wel from '../images/wel.jpg';
 
 
@@ -15,7 +15,6 @@ const Demo = () => {
                         learn, grow, and challenge ourselves. Together, we can foster 
                         meaningful discussions, build strong networks, and make lasting 
                                 impacts within and beyond our community.
-
                         Wishing you all a successful and enriching academic year ahead!"</p>
                  
                      <p> Miss Josephine Nti</p>

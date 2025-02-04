@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Hero.css";
+import "./Hero.css";
 import Navbar from "./Navbar";
 
 const Hero = () => {
@@ -18,6 +18,7 @@ const Hero = () => {
           leaders <br /> through knowledge, collaboration, and integrity.
         </p>
       </div>
+
     </div>
   );
 };
