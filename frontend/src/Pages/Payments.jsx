@@ -70,25 +70,12 @@ const Payments = () => {
           {booking.status}
         </span>
       </td>
-      {/* <td>
-        <input
-          type="checkbox"
-          checked={booking.status === 'Collected'}
-          readOnly
-        />
-      </td> */}
+      
     </tr>
   ))}
 </tbody>
           </table>
-          {/* <div className="calendar">
-            <Calendar
-              className="custom-calendar"
-              onChange={setDate}
-              value={date}
-              defaultValue={new Date()}
-            />
-          </div> */}
+          
         </div>
       </div>
     </div>
