@@ -8,6 +8,18 @@
      
 }
 
+.first{
+    text-align:left
+}
+.second{
+     text-align:left
+
+}
+.third{
+     text-align:left;
+    
+}
+
 .hero:before {
     content: '';
     background: url('../images/bg.jpg') no-repeat center center/cover;
@@ -19,7 +31,7 @@
     z-index: -1;
 }
 
-.hero .content {
+ .content {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -30,22 +42,22 @@
     align-items:left;
 }
 
-.hero .content p:first-child {
+ .content p:first-child {
     font-style: italic;
     font-size: .9rem;
      text-align:left;
 
 }
 
-.hero .content p:nth-child(2) {
+ .content p:nth-child(2) {
     font-size: 1rem;
-    font-weight:200;
+    font-weight:100;
 }
 
 .hero .content p:nth-child(3) {
     font-size: 4rem;
     font-weight: 700;
-    /* align-items:'left' */
+    
 }
 
 

@@ -34,14 +34,12 @@ const Navbar = () => {
                   <li className='nav-item'>
                         <a href='#demo' onClick={closeMenu}>Need Assistance?</a>
                     </li>  
-                     {/* <li className='nav-item'>
-                        <a href='#demo' onClick={closeMenu}>Demo</a>
-                    </li> */}
+                     
                      <button className='butt'> 
-                     <p className='reg'>Registration</p>
-                        <link rel="icon" href="favicon" 
-                        
-                        />
+                    
+                         <a href="/Login"> <p className='reg'>Registration
+                     
+                     </p></a> 
                     </button>
                 </ul>
             </nav>

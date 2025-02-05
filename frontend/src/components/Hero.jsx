@@ -8,12 +8,16 @@ const Hero = () => {
       <Navbar />
 
       <div className="content">
-        <p></p>
-        <p>POSSA</p>
-        <p>
+        <p first='second'></p>
+        <p className="second">POSSA</p>
+        {/* <div>
+
+
+        </div> */}
+        <p className='first'>
           Knowledge, Integrity, and <br /> National Development.
         </p>
-        <p className="context">
+        <p className="third">
           Join the Political Science Students' Association in shaping tomorrow's
           leaders <br /> through knowledge, collaboration, and integrity.
         </p>
