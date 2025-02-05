@@ -95,7 +95,7 @@ const Sidebar = ({ sidebarOpen, toggleSidebar }) => {
             </div>
           </Link>
           
-          <Link to="/logout" className="block">
+          <Link to="/" className="block">
             <div className="flex items-center text-gray-600 p-3 hover:bg-gray-100 rounded-lg transition-colors duration-200 cursor-pointer">
               <LogOut className="w-5 h-5 mr-3 text-[#4318ff]" />
               <span className="font-medium">Logout</span>
