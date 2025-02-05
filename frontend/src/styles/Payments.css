@@ -1,0 +1,184 @@
+/* Souvenir.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text for visibility */
+  }
+  
+  .payments-monitoring {
+    display: flex;
+    min-height: 100vh;
+    background-color: #fff; /* Ensure the background remains white */
+  }
+  
+  .content {
+    flex: 1;
+    padding: 60px 20px; /* Push the content further down */
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px; /* Add spacing below the header */
+  }
+  
+  .title-section h2 {
+    margin: 0;
+    font-size: 26px;
+    color: #000; /* Black text for the title */
+  }
+  
+  .title-section p {
+    color: #666; /* Gray subtitle for contrast */
+    font-size: 14px;
+  }
+  
+  .top-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .date-picker1 input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 113px;
+    height: 37px;
+    background-color: #f9f9f9; /* Light gray input background */
+    color: #333; /* Darker text */
+  }
+  
+  .top-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .icon {
+    padding: 10px;
+    background-color: #f0f0f0; /* Light gray icon background */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd; /* Subtle border for profile picture */
+  }
+  
+  .main-section {
+    display: flex;
+    gap: 20px;
+  }
+  
+  table {
+    flex: 1;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+    margin-right: 50px;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee; /* Light border for rows */
+    color: #000; /* Black text for table content */
+  }
+  
+  .badge {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold; /* Make it stand out */
+  }
+  
+  .badge.successful {
+    background-color: #E9FCEF; /* Light mint green background */
+    color: #2ECC71; /* Darker green text */
+  }
+  
+  .badge.pending {
+    background-color: #FFF4E5; /* Light peach/orange background */
+    color: #F5A623; /* Darker orange text */
+  }
+
+  .badge.failed {
+    background-color: #FFE3E3; /* Light peach/orange background */
+    color:#FF0000 ; /* Darker orange text */
+  }
+  
+  
+  .calendar {
+    width: 300px;
+    background-color: #fff; /* White background for the calendar */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: #000; /* Black text */
+  }
+  
+  .calendar h4 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    color: #000; /* Black text for calendar title */
+    text-align: center;
+  }
+  .custom-calendar {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+  }
+  
+  .react-calendar {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 8px;
+  }
+  
+  .react-calendar__navigation button {
+    background: none;
+    color: #333333;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .react-calendar__tile {
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 4px;
+  }
+  
+  .react-calendar__tile--now {
+    background: #eaf6ff;
+    color: #0077b6;
+  }
+  
+  .react-calendar__tile--active {
+    background: #0077b6;
+    color: #ffffff;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .booking-management {
+      flex-direction: column;
+    }
+  
+    .main-section {
+      flex-direction: column;
+    }
+  }
+  
