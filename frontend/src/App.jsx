@@ -1,6 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Hero from "./components/Hero";
-// import About from "./components/About";
 import Dashboard from "./components/Dashboard";
 import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
@@ -9,6 +7,7 @@ import Settings from "./Pages/Settings";
 import Souvenir from "./Pages/Souvenir";
 import Homepage from "./components/Homepage";
 import Payments from "./Pages/Payments";
+import RegistrationApproval from "./Pages/RegistrationApproval";
 
 function App() {
   return (
@@ -20,8 +19,9 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/souvenir" element={<Souvenir />} />
-        <Route path="/Registration" element={<Registration />} />
+        <Route path="/registration" element={<Registration />} />
         <Route path="/payments" element={<Payments />} />
+        <Route path="/registration-approval" element={<RegistrationApproval />} />
       </Routes>
     </Router>
   );

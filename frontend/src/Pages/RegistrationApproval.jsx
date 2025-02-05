@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Bell, Menu, X, ChevronDown, Search as SearchIcon } from 'lucide-react';
+import { Search, Bell, Menu, X, ChevronDown } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
 import { Button } from "../ui/button";
 
@@ -15,37 +15,25 @@ const MobileHeader = ({ onMenuClick, sidebarOpen }) => (
   </div>
 );
 
-const Payments = () => {
+const RegistrationApproval = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [date, setDate] = useState('15/01/2025');
   const [exportDropdownOpen, setExportDropdownOpen] = useState(false);
 
-  const bookings = [
-    { id:'11002974', name:'Abigail Forson', amountpaid:'500', paymentmethod:'Mobile Money', date:'Jan 3,2025', status:'Successful' },
-    { id:'11029740', name:'Janet Mensah', amountpaid:'500', paymentmethod:'Cash', date:'Jan 3,2025', status:'Successful' },
-    { id:'11297400', name:'Vincent Aidoo', amountpaid:'500', paymentmethod:'Cash', date:'Jan 3,2025', status:'Successful' },
-    { id:'11974002', name:'Prince Nyarko', amountpaid:'500', paymentmethod:'Mobile Money', date:'Jan 4,2025', status:'Failed' },
-    { id:'11740229', name:'Isaac Yeboah', amountpaid:'500', paymentmethod:'Mobile Money', date:'Jan 6,2025', status:'Pending' },
-    { id:'11400297', name:'Steven Essien', amountpaid:'500', paymentmethod:'Cash', date:'Jan 8,2025', status:'Successful' }
+  const registrations = [
+    { id: '11002974', name: 'Abigail Forson', email: 'xxxx@st.ug.edu.gh', proof: 'Uploaded', status: 'Pending' },
+    { id: '11029740', name: 'Janet Mensah', email: 'xxxx@st.ug.edu.gh', proof: 'Uploaded', status: 'Pending' },
+    { id: '11297400', name: 'Vincent Aidoo', email: 'xxxx@st.ug.edu.gh', proof: 'Uploaded', status: 'Pending' },
+    { id: '11974002', name: 'Prince Nyarko', email: 'xxxx@st.ug.edu.gh', proof: 'Uploaded', status: 'Pending' },
+    { id: '11740229', name: 'Isaac Yeboah', email: 'xxxx@st.ug.edu.gh', proof: 'Uploaded', status: 'Pending' },
+    { id: '11400297', name: 'Steven Essien', email: 'xxxx@st.ug.edu.gh', proof: 'Uploaded', status: 'Pending' }
   ];
-
-  const getStatusStyle = (status) => {
-    switch (status.toLowerCase()) {
-      case 'successful': return 'bg-[#E8FFF3] text-green-600';
-      case 'failed': return 'bg-[#FFE4E4] text-red-600';
-      case 'pending': return 'bg-[#FFF4E5] text-orange-600';
-      default: return 'bg-gray-100 text-gray-600';
-    }
-  };
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
   return (
     <div className="flex min-h-screen bg-[#F8F9FA] relative max-w-full overflow-x-hidden">
-      <Sidebar 
-        sidebarOpen={sidebarOpen} 
-        toggleSidebar={toggleSidebar} 
-      />
+      <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
 
       <div className="flex-1 lg:ml-64 w-full">
         <MobileHeader onMenuClick={toggleSidebar} sidebarOpen={sidebarOpen} />
@@ -53,13 +41,13 @@ const Payments = () => {
         <div className="p-4 lg:p-8 max-w-full">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 gap-4">
             <div>
-              <h1 className="text-2xl font-bold text-gray-800">Payments Monitoring</h1>
-              <p className="text-gray-500 mt-1">Complete data of all payment</p>
+              <h1 className="text-2xl font-bold text-gray-800">Registration Approval</h1>
+              <p className="text-gray-500 mt-1">Registered students queue</p>
             </div>
 
             <div className="hidden lg:flex items-center space-x-4">
               <div className="border border-gray-200 rounded-lg p-2">
-                <SearchIcon className="w-5 h-5 text-gray-400" />
+                <Search className="w-5 h-5 text-gray-400" />
               </div>
               <div className="border border-gray-200 rounded-lg p-2">
                 <Bell className="w-5 h-5 text-gray-400" />
@@ -78,8 +66,8 @@ const Payments = () => {
               />
               <div className="relative w-full sm:w-auto">
                 <button 
-                  onClick={() => setExportDropdownOpen(!exportDropdownOpen)}
-                  className="bg-[#1A4CAB] hover:bg-blue-800 text-white px-6 py-2 rounded-2xl transition-colors duration-200 flex items-center justify-center w-full sm:w-auto space-x-2"
+                onClick={() => setExportDropdownOpen(!exportDropdownOpen)}
+                className="bg-[#1A4CAB] hover:bg-blue-800 text-white px-6 py-2 rounded-2xl transition-colors duration-200 flex items-center justify-center w-full sm:w-auto space-x-2"
                 >
                   <span>Export as CSV</span>
                   <ChevronDown className="w-4 h-4" />
@@ -100,26 +88,30 @@ const Payments = () => {
               <table className="w-full min-w-[800px]">
                 <thead className="bg-white border-b">
                   <tr>
+                    <th className="px-6 py-4 text-left text-sm font-medium text-gray-500">Student Name</th>
                     <th className="px-6 py-4 text-left text-sm font-medium text-gray-500">Student ID</th>
-                    <th className="px-6 py-4 text-left text-sm font-medium text-gray-500">Name</th>
-                    <th className="px-6 py-4 text-left text-sm font-medium text-gray-500">Amount Paid</th>
-                    <th className="px-6 py-4 text-left text-sm font-medium text-gray-500">Payment Method</th>
-                    <th className="px-6 py-4 text-left text-sm font-medium text-gray-500">Date</th>
+                    <th className="px-6 py-4 text-left text-sm font-medium text-gray-500">Email</th>
+                    <th className="px-6 py-4 text-left text-sm font-medium text-gray-500">Proof of Registration</th>
                     <th className="px-6 py-4 text-left text-sm font-medium text-gray-500">Status</th>
+                    <th className="px-6 py-4 text-left text-sm font-medium text-gray-500">Action</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
-                  {bookings.map((booking, index) => (
+                  {registrations.map((registration, index) => (
                     <tr key={index} className="hover:bg-gray-50">
-                      <td className="px-6 py-4 text-sm text-gray-900">{booking.id}</td>
-                      <td className="px-6 py-4 text-sm text-gray-900">{booking.name}</td>
-                      <td className="px-6 py-4 text-sm text-gray-900">{booking.amountpaid}</td>
-                      <td className="px-6 py-4 text-sm text-gray-900">{booking.paymentmethod}</td>
-                      <td className="px-6 py-4 text-sm text-gray-900">{booking.date}</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">{registration.name}</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">{registration.id}</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">{registration.email}</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">{registration.proof}</td>
                       <td className="px-6 py-4">
-                        <span className={`px-3 py-1 rounded-full text-xs ${getStatusStyle(booking.status)}`}>
-                          {booking.status}
+                        <span className="px-3 py-1 rounded-full text-xs bg-[#FFF4E5] text-orange-600">
+                          {registration.status}
                         </span>
+                      </td>
+                      <td className="px-6 py-4">
+                        <button className="px-6 py-2 bg-[#4991FF] text-white rounded-2xl text-sm hover:bg-blue-600 transition-colors">
+                          Approve
+                        </button>
                       </td>
                     </tr>
                   ))}
@@ -133,4 +125,4 @@ const Payments = () => {
   );
 };
 
-export default Payments;
+export default RegistrationApproval;

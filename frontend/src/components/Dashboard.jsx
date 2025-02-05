@@ -1,11 +1,10 @@
+import { Link } from 'react-router-dom';
 import { useState } from "react"
 import {
   Bell,
   Menu,
   X,
   Search,
-  LogOut,
-  Settings,
   Users,
   LayoutDashboard,
   Wallet,
@@ -32,8 +31,7 @@ import {
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Card } from "../ui/card";
-
-import logo from "../images/Uglogo.png"
+import Sidebar from './Sidebar';
 
 const MobileHeader = ({ onMenuClick, sidebarOpen }) => (
   <div className="lg:hidden flex justify-between items-center p-4 bg-white">
@@ -77,62 +75,10 @@ const Dashboard = () => {
 
   return (
     <div className="flex min-h-screen bg-gray-50 relative max-w-full overflow-x-hidden">
-      {/* Sidebar with overlay for mobile */}
-      <div
-        className={`fixed inset-0 bg-black/50 lg:hidden transition-opacity z-30 ${
-          sidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
-        onClick={toggleSidebar}
+      <Sidebar 
+        sidebarOpen={sidebarOpen} 
+        toggleSidebar={toggleSidebar} 
       />
-
-      <aside
-        className={`w-64 bg-white py-6 px-4 flex flex-col fixed h-full z-40 transition-transform duration-200 ease-in-out ${
-          sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0`}
-      >
-        <div className="flex items-center justify-between mb-12 px-2">
-          <div className="flex items-center">
-            <img src={logo || "/placeholder.svg"} alt="POSSA Logo" className="w-8 h-8 mr-2" />
-            <span className="font-bold text-xl">POSSA</span>
-          </div>
-          <Button variant="ghost" size="icon" className="lg:hidden" onClick={toggleSidebar}>
-            <X className="h-6 w-6" />
-          </Button>
-        </div>
-
-        <nav className="space-y-1 flex-1">
-          <div className="flex items-center text-primary p-3 bg-blue-50 rounded-lg">
-            <LayoutDashboard className="w-5 h-5 mr-3 text-[#4318ff]" />
-            <span className="font-medium">Dashboard</span>
-          </div>
-
-          <div className="flex items-center text-gray-600 p-3 hover:bg-gray-100 rounded-lg transition-colors duration-200">
-            <Wallet className="w-5 h-5 mr-3 text-[#4318ff]" />
-            <span className="font-medium">Payments Monitoring</span>
-          </div>
-
-          <div className="flex items-center text-gray-600 p-3 hover:bg-gray-100 rounded-lg transition-colors duration-200">
-            <Hourglass className="w-5 h-5 mr-3 text-[#4318ff]" />
-            <span className="font-medium">Registration Approval</span>
-          </div>
-
-          <div className="flex items-center text-gray-600 p-3 hover:bg-gray-100 rounded-lg transition-colors duration-200">
-            <Gift className="w-5 h-5 mr-3 text-[#4318ff]" />
-            <span className="font-medium">Souvenirs Booking</span>
-          </div>
-        </nav>
-
-        <div className="border-t pt-4 space-y-1">
-          <div className="flex items-center text-gray-600 p-3 hover:bg-gray-100 rounded-lg transition-colors duration-200 cursor-pointer">
-            <Settings className="w-5 h-5 mr-3 text-[#4318ff]" />
-            <span className="font-medium">Settings</span>
-          </div>
-          <div className="flex items-center text-gray-600 p-3 hover:bg-gray-100 rounded-lg transition-colors duration-200 cursor-pointer">
-            <LogOut className="w-5 h-5 mr-3 text-[#4318ff]" />
-            <span className="font-medium">Logout</span>
-          </div>
-        </div>
-      </aside>
 
       {/* Main Content */}
       <div className="flex-1 lg:ml-64 w-full">
@@ -385,4 +331,3 @@ const Dashboard = () => {
 }
 
 export default Dashboard
-
