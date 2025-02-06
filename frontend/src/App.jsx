@@ -7,6 +7,7 @@ import Settings from "./Pages/Settings";
 import Souvenir from "./Pages/Souvenir";
 import Homepage from "./components/Homepage";
 import Payments from "./Pages/Payments";
+import Proof from "./Pages/Proof";
 import RegistrationApproval from "./Pages/RegistrationApproval";
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
         <Route path="/souvenir" element={<Souvenir />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/payments" element={<Payments />} />
+        <Route path="/proof" element={<Proof />} />
+
         <Route path="/registration-approval" element={<RegistrationApproval />} />
       </Routes>
     </Router>
