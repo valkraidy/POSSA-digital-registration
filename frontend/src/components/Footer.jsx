@@ -5,6 +5,11 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 1b6451e7422269469aff414c22411d4ca0b73112
 
 const Footer = () => {
     return (
