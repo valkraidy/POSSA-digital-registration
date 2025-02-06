@@ -1,14 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-<<<<<<< HEAD
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Dashboard from "./components/Dashboard";
-=======
-// <<<<<<< HEAD
-
-import Dashboard from "./Pages/Dashboard";
-// =======
-// import Dashboard from "./components/Dashboard";
-// >>>>>>> 4fb8f756abafd59b6a69e63d5a9896200bcb1909
->>>>>>> 1b6451e7422269469aff414c22411d4ca0b73112
 import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 import Registration from "./Pages/Registration";
