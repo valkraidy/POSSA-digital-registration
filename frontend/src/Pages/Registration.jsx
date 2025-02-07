@@ -1,86 +1,58 @@
-import React, { useState } from 'react';
-import '../styles/Registration.css';
-import POSSA from '../images/Possalogo.png';
-import Sign from '../images/signup.png';
+import React from "react";
+import "../styles/Registration.css"; // Import the CSS file
+import universityLogo from "../images/Possalogo.png"; 
+import studentsImage from "../images/signup.png"; 
 
-const Registration = () => {
-  const [passwordStrength, setPasswordStrength] = useState('');
 
-  const handlePasswordChange = (e) => {
-    const password = e.target.value;
-    const strengthLevels = {
-      weak: 5,
-      moderate: 10,
-    };
-    if (password.length < strengthLevels.weak) {
-      setPasswordStrength('Weak');
-    } else if (password.length < strengthLevels.moderate) {
-      setPasswordStrength('Moderate');
-    } else {
-      setPasswordStrength('Strong');
-    }
-  };
-
+const RegistrationForm = () => {
   return (
-    <div className="reg-wrapper">
-      <div className="reg-image-box">
-        <img src={Sign} alt="Students studying" />
+    <div className="container">
+      {/* Left Section - Image */}
+      <div className="image-section">
+        <img src={studentsImage} alt="Students on stairs" />
       </div>
-      <div className="reg-form-box">
-        <img
-          src={POSSA} 
-          alt="UG Political Science Logo"
-          className="reg-logo"
-        />
-        <h3 className='reg-title'>Registration</h3>
-        <p className='reg-subtitle'>Complete this form to proceed</p>
 
-        <form>   
-          <div className="reg-row">
-            <div className="reg-col">
-              <input type="text" placeholder="Enter full name" required />
-              <input type="text" placeholder="Enter student ID" required />
-
-              <select required>
-                <option value="">Select Programme</option>
-                <option value="programme1">Programme 1</option>
-                <option value="programme2">Programme 2</option>
-              </select>
-
-              <select required>
-                <option value="">Select Year</option>
-                <option value="year1">Year 1</option>
-                <option value="year2">Year 2</option>
-                <option value="year3">Year 3</option>
-                <option value="year4">Year 4</option>
-              </select>
-            </div>
-            <div className="reg-col-alt">
-              <input type="tel" placeholder="Phone number" required />
-              <input type="email" placeholder="Student Email" required />
-              <input
-                type="password"
-                placeholder="Enter password"
-                onChange={handlePasswordChange}
-                required
-              />
-              <div className="password-status">{passwordStrength}</div>
-              <input
-                type="password"
-                placeholder="Confirm password"
-                required
-              />
-            </div>
+      {/* Right Section - Form */}
+      <div className="form-section">
+        <div className="form-container">
+          {/* Logo */}
+          <div className="logo">
+            <img src={universityLogo} alt="University Logo" />
           </div>
-        </form>
-  
-        <div className="reg-buttons">
-          <button type="button" className="btn-cancel">Cancel</button>
-          <button type="submit" className="btn-next">Next</button>
+          {/* Form Title */}
+          <h2 className="form-title">Registration</h2>
+          <p className="form-subtitle">Complete this form to proceed</p>
+
+          {/* Form Fields */}
+          <form>
+            <div className="form-grid">
+              <input type="text" placeholder="Full Name" className="input-field" />
+              <input type="text" placeholder="Phone number" className="input-field" />
+              <input type="text" placeholder="Student ID" className="input-field" />
+              <input type="email" placeholder="Email" className="input-field" />
+              <select className="input-field">
+                <option>Programme</option>
+              </select>
+              <select className="input-field">
+                <option>Year</option>
+              </select>
+              <input type="password" placeholder="Enter password" className="input-field" />
+              <input type="password" placeholder="Confirm password" className="input-field" />
+            </div>
+
+            {/* Password Strength Indicator */}
+            <div className="password-strength">Weak &nbsp; Moderate &nbsp; Strong</div>
+
+            {/* Buttons */}
+            <div className="button-group">
+              <button className="cancel-btn">Cancel</button>
+              <button className="next-btn">Next</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   );
 };
 
-export default Registration;
+export default RegistrationForm;

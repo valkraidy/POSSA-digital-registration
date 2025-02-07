@@ -9,111 +9,114 @@ body {
 .login-container {
   display: flex;
   height: 100vh; /* Full viewport height */
-  flex-wrap: wrap;
 }
 
 /* Image Section */
 .image-section {
-  flex: 1;
-  min-width: 300px;
+  flex: 1.2;
+  min-width: 400px;
   position: relative;
-  height: 100%; /* Ensure the image takes up the full height */
+  height: 100vh;
 }
 
 .background-image {
-  width: 150%;
-  height: 100%; /* Make sure the image fills the container */
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  margin-left: 50px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  background-color: #ffffff;
-
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 
 /* Form Section */
 .formm-section {
   flex: 1;
-  min-width: 300px;
+  min-width: 500px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 15px; /* Reduced padding to make the form more compact */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  height: 100%; /* Ensure the form takes up the full height */
-  font-size: 0.9rem; /* Slightly reduced font size to make everything smaller */
+  padding: 40px;
+  height: 100vh;
 }
 
 /* Logo Section */
 .logo-section {
-  width: 100%;
   text-align: center;
-  margin-bottom: 5px; /* Reduce bottom margin */
+  margin-bottom: 20px;
 }
 
 .plogo {
-  width: 220px; /* Slightly reduce logo size */
-  margin: 0 auto;
-  display: block;
-  margin-top: 10px;
-}
-.welcome {
-  font-size: 2rem; /* Slightly smaller font size */
-  color: #555555;
-  margin-bottom: 15px; /* Reduced bottom margin */
+  width: 200px;
+  margin-bottom: 10px;
 }
 
-h3 {
-  font-size: 1.5rem;
-  color: #333;
+.welcome {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 10px;
 }
 
 .para {
+  font-size: 1rem;
   color: #666;
-  margin-bottom: 10px; /* Reduced margin */
+  margin-bottom: 20px;
   text-align: center;
 }
-
 
 /* Form Styles */
 form {
   width: 100%;
-  max-width: 380px; /* Reduce max-width of form */
+  max-width: 300px;
   display: flex;
   flex-direction: column;
-  margin-top: 0; /* Remove any extra top margin */
 }
 
 label {
-  font-weight: bold;
-  margin-top: 3px; /* Reduce space between labels and inputs */
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #333;
 }
 
-input {
+input[type="text"],
+input[type="password"] {
   width: 100%;
-  padding: 7px; /* Reduce padding to make inputs smaller */
-  margin-top: 8px; /* Reduce space between fields */
+  padding: 16px; /* Increase padding to make fields taller */
+  margin-top: 5px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensure padding is included in the height */
+  height: 50px; /* Explicitly set the height */
 }
 
+/* Checkbox and label styling */
 .options {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 3px; /* Reduced space between options */
+  margin-top: 15px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+}
+
+.remember-me input {
+  margin-right: 8px; /* Space between checkbox and label */
 }
 
 .remember-me label {
-  font-size: 0.85rem; /* Slightly reduce font size of the remember me label */
-  color: #555;
+  font-size: 0.9rem;
+  color: #444;
 }
 
 .forgot-pin {
-  font-size: 0.85rem; /* Slightly reduce font size of the forgot pin text */
-  color: #007BFF;
+  font-size: 0.9rem;
+  color: #0056b3;
   text-decoration: none;
 }
 
@@ -123,46 +126,37 @@ input {
 
 /* Button Styles */
 .login-button {
-  margin-top: 8px; /* Reduced space above the button */
+  margin-top: 20px;
   background-color: #003366;
   color: white;
-  padding: 9px;
+  padding: 16px; /* Match padding of input fields */
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 0.9rem; /* Slightly reduce font size for the button */
+  font-size: 1rem;
+  font-weight: bold;
+  height: 50px; /* Set same height as input fields */
 }
 
 .login-button:hover {
-  background-color: #4478ac;
-  color: #ccc;
+  background-color: #002244;
 }
+
+
 
 /* Register Link */
 .register-link {
-  margin-top: 8px; /* Reduced space between button and register link */
+  margin-top: 15px;
+  font-size: 0.95rem;
 }
 
 .register-link a {
-  color: #007BFF;
+  color: #0056b3;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .register-link a:hover {
   text-decoration: underline;
 }
 
-/* Footer */
-.footer {
-  margin-top: 8px; /* Reduced space above footer */
-  font-size: 0.8rem;
-}
-
-.footer a {
-  color: #007BFF;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
