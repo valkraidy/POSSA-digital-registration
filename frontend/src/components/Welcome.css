@@ -13,10 +13,10 @@
 }
 
 .demo .col-1 {
-    padding: 1rem;
+    padding: .5rem;
     display: flex;
     flex-direction: column;
-    margin-top:40px
+    margin-top:130px
   
 
 }
@@ -59,8 +59,8 @@
 }
 
    .demo img {
-        width: 452px;
-height: 505px;
+        width: 422px;
+      height: 450px;
 
    }
 
@@ -73,8 +73,8 @@ height: 505px;
     }
 
     .demo img {
-        width: 382px;
-height: 435px;
+        width: 352px;
+    height: 415px;
 
        
     }

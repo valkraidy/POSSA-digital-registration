@@ -1,7 +1,7 @@
 .about {
     background-color: #f8f8f8;
     margin: auto;
-    padding: 8rem 1rem 0 1rem;
+    padding: 7rem 1rem 0 1rem;
     width: 100%;
 }
 
@@ -15,24 +15,24 @@
 .about h2 {
     font-size: 15px;
     color:#B79A64;
+       margin-top: 1rem;
 }
 
 .about .col-2 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* padding: 3rem; */
+  
+    
 }
 
 .about .col-2 p:first-of-type {
-    margin: 1rem 0;
-     font-size:1rem;
+    margin: .5rem 0;
+     font-size:0.9rem;
      color:#30343D80
 }
 
 .about .col-2 p:nth-child(4) {
-    font-size:16px;
+    font-size:15px;
     font-weight: 300;
 }
 .vision{
@@ -42,13 +42,13 @@
     margin-top: 1rem;
 }
 .Mission{
-      font-size:1.5rem
+      font-size:1rem
 
 }
 
 .about .container img {
          width: 472px;
-height: 505px;
+        height: 505px;
     }
 
      .about button {
@@ -56,8 +56,9 @@ height: 505px;
         height:30px;
         width:90px;
         color:#153D6FCC;
-        background-color:width;
-    
+        background-color:#f8f8f8;  
+        border-width:1px;
+        border-radius:5px
     }
 
 

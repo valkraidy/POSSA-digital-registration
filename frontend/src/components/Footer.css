@@ -1,4 +1,5 @@
 .footer {
+<<<<<<< HEAD
     background-color: #153D6F;
     color: white;
     padding: 40px 80px 20px;
@@ -72,3 +73,109 @@
     text-decoration: none;
   }
   
+=======
+    width: 100%;
+    background-color:#153D6F;
+    color: #eee;
+    padding:  1rem;
+
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: auto;
+     height:200px;
+      margin-top:2rem;
+      justify-content:space-between
+}
+
+.footer ul {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.footer li {
+    padding: 0.1rem;
+}
+
+.footer li a {
+    color: #fff;
+}
+
+.footer li a:hover {
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.line {
+    margin-bottom: 1rem;
+}
+
+.firstfoot{
+       text-align: left;
+
+}
+.firstfoot img{
+    width:300px;
+    height:70px
+
+}
+
+
+.foottext{
+      text-align: left;
+}
+
+.footlist{
+    flex-direction:column;
+     text-align: right;
+      justify-content: flex-end;
+       /* margin-top:3rem; */
+}
+
+.foot{
+    flex-direction:column;
+    margin-top:-1rem;
+    flex-direction:column;
+
+}
+.myfoot{
+      flex-direction:column;
+}
+.lastfoot{
+    border-width:0.6px;
+    width:1240;
+    color:#FFFFFF80
+}
+
+
+.copy{
+    justify-content: flex-start; 
+    display:flex;
+     margin-top:1rem;
+}
+.right{
+      
+        justify-content: center;
+        display:flex ;
+           margin-top:-1rem;
+
+}
+
+.socials-container {
+  display: flex;
+  justify-content: flex-end; 
+   gap: 15px; 
+   margin-top:-1.4rem;
+}
+
+.socials-container svg {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.socials-container svg:hover {
+  transform: scale(1.1); 
+}
+
+>>>>>>> f80f237a921515ce8620ccd3d2dcb9cc5f82b2b2

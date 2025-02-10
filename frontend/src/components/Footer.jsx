@@ -6,8 +6,11 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f80f237a921515ce8620ccd3d2dcb9cc5f82b2b2
 const Footer = () => {
     return (
         <div className='footer'>
@@ -39,14 +42,19 @@ const Footer = () => {
 
                 </div>
 
-                <div>
+             
+
+
+             
+
+            </div>
+               <div>
                     <p className='lastfoot'></p>
                 </div>
 
-
-                <div className='linefooter-container'>
+                   <div className='linefooter-container'>
                   
-                        <p className='copy'>©2024, University of Ghana</p>
+                        <p className='copy'>©2025, University of Ghana</p>
                     
                         <p className='right'>All Rights Reserved • Contact Support</p>
                     
@@ -58,7 +66,11 @@ const Footer = () => {
                          </div>
                 </div>
 
-            </div>
+
+
+
+
+
         </div>
     )
 }
