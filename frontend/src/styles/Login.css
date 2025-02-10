@@ -52,7 +52,7 @@ body {
 }
 
 .welcome {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #222;
   margin-bottom: 10px;
@@ -83,13 +83,13 @@ label {
 input[type="text"],
 input[type="password"] {
   width: 100%;
-  padding: 16px; /* Increase padding to make fields taller */
+  padding: 14px;
   margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
-  box-sizing: border-box; /* Ensure padding is included in the height */
-  height: 50px; /* Explicitly set the height */
+  box-sizing: border-box;
+  height: 50px;
 }
 
 /* Checkbox and label styling */
@@ -106,7 +106,7 @@ input[type="password"] {
 }
 
 .remember-me input {
-  margin-right: 8px; /* Space between checkbox and label */
+  margin-right: 8px;
 }
 
 .remember-me label {
@@ -129,20 +129,19 @@ input[type="password"] {
   margin-top: 20px;
   background-color: #003366;
   color: white;
-  padding: 16px; /* Match padding of input fields */
+  padding: 14px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-size: 1rem;
   font-weight: bold;
-  height: 50px; /* Set same height as input fields */
+  height: 50px;
+  width: 100%;
 }
 
 .login-button:hover {
   background-color: #002244;
 }
-
-
 
 /* Register Link */
 .register-link {
@@ -160,3 +159,69 @@ input[type="password"] {
   text-decoration: underline;
 }
 
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .login-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .image-section {
+    flex: none;
+    width: 100%;
+    height: 40vh; /* Adjust height */
+  }
+
+  .background-image {
+    border-radius: 0; /* Remove rounded edges for mobile */
+  }
+
+  .formm-section {
+    min-width: auto;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .formm-section {
+    padding: 20px;
+  }
+
+  .plogo {
+    width: 150px;
+  }
+
+  .welcome {
+    font-size: 1.8rem;
+  }
+
+  .para {
+    font-size: 0.9rem;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    padding: 12px;
+    height: 45px;
+  }
+
+  .login-button {
+    padding: 12px;
+    height: 45px;
+  }
+
+  .options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .forgot-pin {
+    margin-top: 5px;
+  }
+}
