@@ -1,14 +1,9 @@
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-<<<<<<< HEAD
-// <<<<<<< HEAD
 
 import Dashboard from "./Pages/Dashboard";
-// =======
-// import Dashboard from "./components/Dashboard";
-// >>>>>>> 4fb8f756abafd59b6a69e63d5a9896200bcb1909
-=======
-import Dashboard from "./components/Dashboard";
->>>>>>> 3854fbc87a2d201e8c2fb123c89477f46da84e20
+
+
 import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 import Registration from "./Pages/Registration";
@@ -16,6 +11,7 @@ import Settings from "./Pages/Settings";
 import Souvenir from "./Pages/Souvenir";
 import Homepage from "./components/Homepage";
 import Payments from "./Pages/Payments";
+import Proof from "./Pages/Proof";
 import RegistrationApproval from "./Pages/RegistrationApproval";
 
 function App() {
@@ -30,6 +26,8 @@ function App() {
         <Route path="/souvenir" element={<Souvenir />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/payments" element={<Payments />} />
+        <Route path="/proof" element={<Proof />} />
+
         <Route path="/registration-approval" element={<RegistrationApproval />} />
       </Routes>
     </Router>

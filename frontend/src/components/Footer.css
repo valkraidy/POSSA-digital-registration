@@ -2,12 +2,16 @@
     width: 100%;
     background-color:#153D6F;
     color: #eee;
-    padding: 3rem 1rem;
+    padding:  1rem;
+
 }
 
 .footer .container {
     max-width: 1200px;
     margin: auto;
+     height:200px;
+      margin-top:2rem;
+      justify-content:space-between
 }
 
 .footer ul {
@@ -36,6 +40,13 @@
        text-align: left;
 
 }
+.firstfoot img{
+    width:300px;
+    height:70px
+
+}
+
+
 .foottext{
       text-align: left;
 }
@@ -43,12 +54,13 @@
 .footlist{
     flex-direction:column;
      text-align: right;
-       margin-top:-7rem;
+      justify-content: flex-end;
+       /* margin-top:3rem; */
 }
 
 .foot{
     flex-direction:column;
-    margin-top:-11rem;
+    margin-top:-1rem;
     flex-direction:column;
 
 }
@@ -56,30 +68,30 @@
       flex-direction:column;
 }
 .lastfoot{
-    border-width:0.5px;
+    border-width:0.6px;
     width:1240;
     color:#FFFFFF80
 }
 
-.linefooter-container{
-    flex-direction: row;
-    justify-content:space-evenly
-}
+
 .copy{
     justify-content: flex-start; 
     display:flex;
-     margin-top:2rem;
+     margin-top:1rem;
 }
 .right{
-        margin-top:-1rem;
+      
+        justify-content: center;
+        display:flex ;
+           margin-top:-1rem;
 
 }
 
 .socials-container {
   display: flex;
   justify-content: flex-end; 
-  gap: 15px; 
-          margin-top:-1.4rem;
+   gap: 15px; 
+   margin-top:-1.4rem;
 }
 
 .socials-container svg {
