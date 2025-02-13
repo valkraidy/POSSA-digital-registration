@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
-import '../styles/SignUp.css'; // Importing the CSS file
-import POSSA from '../images/Possalogo.png';
-import Sign from '../images/signup.png';
-import { useUserStore } from '../Store/UserStore';
-import Toast from '../components/Toast';
+import React, { useState } from "react";
+import "../styles/SignUp.css"; // Importing the CSS file
+import POSSA from "../images/Possalogo.png";
+import Sign from "../images/signup.png";
+import { useUserStore } from "../Store/UserStore";
+import Toast from "../components/Toast";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
-  const { signUp, message, toast, error, isLoading ,setToast} = useUserStore();
-  const [passwordStrength, setPasswordStrength] = useState('Weak');
-  const [confirmPasswordStrength, setConfirmPasswordStrength] = useState('Weak');
+  const navigate = useNavigate();
+  const { signUp, message, toast, error, isLoading, setToast } = useUserStore();
+  const [passwordStrength, setPasswordStrength] = useState("Weak");
+  const [confirmPasswordStrength, setConfirmPasswordStrength] =
+    useState("Weak");
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const [signupDetails, setSignupDetails] = useState({
@@ -17,7 +20,7 @@ const SignUp = () => {
     studentId: "",
     password: "",
     program: "",
-    gender: ""
+    gender: "",
   });
 
   const handleSignup = async (e) => {
@@ -30,13 +33,16 @@ const SignUp = () => {
       signupDetails.program,
       signupDetails.gender
     );
+    if (message === "Signup successful!") {
+      navigate("/login");
+    }
   };
 
   const checkPasswordStrength = (password) => {
-    if (password.length < 6) return 'Weak';
-    if (password.length < 12) return 'Moderate';
-    
-    return 'Strong';
+    if (password.length < 6) return "Weak";
+    if (password.length < 12) return "Moderate";
+
+    return "Strong";
   };
 
   const handlePasswordChange = (e) => {
@@ -52,7 +58,13 @@ const SignUp = () => {
 
   return (
     <div className="signup-container">
-      {toast.message && <Toast message={toast.message} type={toast.type} onClose={() => setToast({ message: "", type: "sucess" })} />}
+      {toast.message && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={() => setToast({ message: "", type: "" })}
+        />
+      )}
       <div className="signup-image-section">
         <img src={Sign} alt="Students studying" />
       </div>
@@ -70,7 +82,9 @@ const SignUp = () => {
                   type="text"
                   placeholder="Enter full name"
                   value={signupDetails.name}
-                  onChange={(e) => setSignupDetails({ ...signupDetails, name: e.target.value })}
+                  onChange={(e) =>
+                    setSignupDetails({ ...signupDetails, name: e.target.value })
+                  }
                 />
               </div>
               <div className="signup-form-group">
@@ -79,26 +93,43 @@ const SignUp = () => {
                   type="text"
                   placeholder="Enter student ID"
                   value={signupDetails.studentId}
-                  onChange={(e) => setSignupDetails({ ...signupDetails, studentId: e.target.value })}
+                  onChange={(e) =>
+                    setSignupDetails({
+                      ...signupDetails,
+                      studentId: e.target.value,
+                    })
+                  }
                 />
               </div>
               <div className="signup-form-group">
                 <label>Programme</label>
                 <select
                   value={signupDetails.program}
-                  onChange={(e) => setSignupDetails({ ...signupDetails, program: e.target.value })}
+                  onChange={(e) =>
+                    setSignupDetails({
+                      ...signupDetails,
+                      program: e.target.value,
+                    })
+                  }
                 >
                   <option value="">Select an option</option>
                   <option value="Computer Science">Computer Science</option>
                   <option value="Engineering">Engineering</option>
-                  <option value="Business Administration">Business Administration</option>
+                  <option value="Business Administration">
+                    Business Administration
+                  </option>
                 </select>
               </div>
               <div className="signup-form-group">
                 <label>Gender</label>
                 <select
                   value={signupDetails.gender}
-                  onChange={(e) => setSignupDetails({ ...signupDetails, gender: e.target.value })}
+                  onChange={(e) =>
+                    setSignupDetails({
+                      ...signupDetails,
+                      gender: e.target.value,
+                    })
+                  }
                 >
                   <option value="">Select an option</option>
                   <option value="Male">Male</option>
@@ -115,7 +146,12 @@ const SignUp = () => {
                   type="tel"
                   placeholder="Phone number"
                   value={signupDetails.phone}
-                  onChange={(e) => setSignupDetails({ ...signupDetails, phone: e.target.value })}
+                  onChange={(e) =>
+                    setSignupDetails({
+                      ...signupDetails,
+                      phone: e.target.value,
+                    })
+                  }
                 />
               </div>
               <div className="signup-form-group">
@@ -123,7 +159,12 @@ const SignUp = () => {
                   type="email"
                   placeholder="Student Email"
                   value={signupDetails.email}
-                  onChange={(e) => setSignupDetails({ ...signupDetails, email: e.target.value })}
+                  onChange={(e) =>
+                    setSignupDetails({
+                      ...signupDetails,
+                      email: e.target.value,
+                    })
+                  }
                 />
               </div>
               <div className="signup-form-group">
@@ -135,7 +176,9 @@ const SignUp = () => {
                   onChange={handlePasswordChange}
                 />
                 <div className="signup-password-strength-meter">
-                  <span className={passwordStrength.toLowerCase()}>{passwordStrength}</span>
+                  <span className={passwordStrength.toLowerCase()}>
+                    {passwordStrength}
+                  </span>
                 </div>
               </div>
               <div className="signup-form-group">
@@ -147,7 +190,9 @@ const SignUp = () => {
                   onChange={handleConfirmPasswordChange}
                 />
                 <div className="signup-password-strength-meter">
-                  <span className={confirmPasswordStrength.toLowerCase()}>{confirmPasswordStrength}</span>
+                  <span className={confirmPasswordStrength.toLowerCase()}>
+                    {confirmPasswordStrength}
+                  </span>
                 </div>
               </div>
             </div>
@@ -155,14 +200,18 @@ const SignUp = () => {
 
           <div className="signup-terms-container">
             <label className="signup-terms-label">
-              <input type="checkbox"  required/>
+              <input type="checkbox" required />
               <span>I accept the Terms and Conditions of services</span>
             </label>
           </div>
 
           <div className="signup-button-group">
-            <button type="button" className="signup-cancel-btn">Cancel</button>
-            <button type="submit" className="signup-signup-btn">Sign Up</button>
+            <button type="button" className="signup-cancel-btn">
+              Cancel
+            </button>
+            <button type="submit" className="signup-signup-btn">
+              Sign Up
+            </button>
           </div>
 
           <div className="signup-login-link">

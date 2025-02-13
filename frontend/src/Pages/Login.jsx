@@ -1,37 +1,42 @@
-import  { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
-import '../styles/Login.css';
-import universityImage from '../images/UGbuilding.png';
-import POSSA from '../images/Possalogo.png';
-import { useUserStore } from '../Store/UserStore';
-import Toast from '../components/Toast';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook
+import "../styles/Login.css";
+import universityImage from "../images/UGbuilding.png";
+import POSSA from "../images/Possalogo.png";
+import { useUserStore } from "../Store/UserStore";
+import Toast from "../components/Toast";
 
 const Login = () => {
   const navigate = useNavigate(); // Initialize navigate function
-  const { Login, message, toast, error, isLoading ,user,setToast} = useUserStore();
+  const { login, message, toast, error, isLoading, user, setToast } =
+    useUserStore();
   const [loginDetails, setLoginDetails] = useState({
     studentId: "",
-    password: ""
+    password: "",
   });
 
   const handleLogin = async (e) => {
     e.preventDefault(); // Prevent page refresh
-    await Login(
-      loginDetails.studentId,
-      loginDetails.password
-    );
-    console.log(message)
-    console.log(error)
-    console.log(toast)
-    console.log(user)
-
+    await login(loginDetails.studentId, loginDetails.password);
+    if (user) {
+      navigate("/proof");
+    }
+    console.log(message);
+    console.log(error);
+    console.log(toast);
+    console.log(user);
   };
 
   return (
     <div className="login-container">
-      {toast.message && <Toast message={toast.message} type={toast.type} onClose={() => setToast({ message: "", type: "" })} />}
+      {toast.message && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={() => setToast({ message: "", type: "" })}
+        />
+      )}
 
-      
       <div className="image-section">
         <img
           src={universityImage}
@@ -40,7 +45,6 @@ const Login = () => {
         />
       </div>
       <div className="formm-section">
-        
         <div className="logo-section">
           <img src={POSSA} alt="UG Political Science Logo" className="plogo" />
         </div>
@@ -83,7 +87,7 @@ const Login = () => {
 
           <button type="submit" className="login-button">
             {isLoading ? "Logging in..." : "Login"}
-            </button>
+          </button>
         </form>
 
         <p className="register-link">
