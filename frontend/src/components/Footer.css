@@ -1,17 +1,11 @@
 .footer {
-<<<<<<< HEAD
     width: 100%;
     background-color:#153D6F;
     color: #eee;
     padding:  1rem;
 
 }
-=======
 
-    background-color: #153D6F;
-    color: white;
-    padding: 40px 80px 20px;
-  }
   
   .footer-content {
     display: flex;
@@ -81,8 +75,6 @@
     text-decoration: none;
   }
   
->>>>>>> cf2780a (just pulled)
-
 .footer .container {
     max-width: 1200px;
     margin: auto;
