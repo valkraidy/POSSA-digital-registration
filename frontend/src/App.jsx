@@ -2,8 +2,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Dashboard from "./components/Dashboard";
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cf2780a (just pulled)
 import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp";
 import Registration from "./Pages/Registration";

@@ -5,7 +5,10 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cf2780a (just pulled)
 const Footer = () => {
     return (
         <div className='footer'>
