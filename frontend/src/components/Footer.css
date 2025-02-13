@@ -1,79 +1,4 @@
 .footer {
-<<<<<<< HEAD
-    background-color: #153D6F;
-    color: white;
-    padding: 40px 80px 20px;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-  }
-  
-  .footer-left {
-    max-width: 300px;
-  }
-  
-  .footer-logo {
-    width: 200px;
-    margin-bottom: 20px;
-  }
-  
-  .footer-contact {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  
-  .footer-links {
-    display: flex;
-    gap: 80px;
-  }
-  
-  .footer-section {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .footer-section h3 {
-    color: #FFC107;
-    margin-bottom: 20px;
-    font-size: 16px;
-  }
-  
-  .footer-section a {
-    color: white;
-    text-decoration: none;
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-  
-  .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 14px;
-  }
-  
-  .footer-bottom-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-  
-  .social-icons {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .social-icons a {
-    color: white;
-    text-decoration: none;
-  }
-  
-=======
     width: 100%;
     background-color:#153D6F;
     color: #eee;
@@ -178,4 +103,3 @@
   transform: scale(1.1); 
 }
 
->>>>>>> f80f237a921515ce8620ccd3d2dcb9cc5f82b2b2

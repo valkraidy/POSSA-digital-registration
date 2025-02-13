@@ -6,11 +6,6 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> f80f237a921515ce8620ccd3d2dcb9cc5f82b2b2
 const Footer = () => {
     return (
         <div className='footer'>
